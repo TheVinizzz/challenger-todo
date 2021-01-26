@@ -68,7 +68,7 @@ export default function ViewTodo({todo}: IProps) {
                             color="primary"
                         />
                     }
-                    label="Desativar"
+                    label="Concluido"
                 />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ export default function ViewTodo({todo}: IProps) {
                         onClick={handleUpdateTodo}
                         color="primary"
                         size="small"
-                        disabled={!getStatus}
+                        disabled={getStatus}
                         style={{marginRight: 5}}
                     >
                         Editar
@@ -88,7 +88,7 @@ export default function ViewTodo({todo}: IProps) {
                         onClick={handleDeleteTodo}
                         size="small"
                         startIcon={<DeleteIcon />}
-                        disabled={!getStatus}
+                        disabled={getStatus}
                     >
                         Delete
                     </Button>
